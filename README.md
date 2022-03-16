@@ -16,6 +16,9 @@ Disfruta aprender, el conocimiento te da poderes para transformar tu entorno y h
 
 ### Glosario de términos
 
+Conexión remota a base de datos
+
+psql -h (ip) -p (puerto postgres) -U (usuario) -d (base_datos)
 
 
 | Comando   |      Tipo      |  Descripción |
@@ -28,4 +31,8 @@ Disfruta aprender, el conocimiento te da poderes para transformar tu entorno y h
 | \h | postgres | Listar información consultas SQL disponibles |
 | \dt | postgres | Ver todas las tablas creadas en postgres |
 | \g | postgres | Ejecutar el comando previo |
+| \dn | postgres | Lista de esquemas |
+| \i filename | postgres | Ejecutar desde comandos desde un archivo |
+| \e | postgres | Abrir editor de código |
 | \q | postgres | Terminar la consola |
+| SELECT version(); | SQL | Ver versión de postgres |
