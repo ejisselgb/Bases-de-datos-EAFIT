@@ -34,5 +34,9 @@ psql -h (ip) -p (puerto postgres) -U (usuario) -d (base_datos)
 | \dn | postgres | Lista de esquemas |
 | \i filename | postgres | Ejecutar desde comandos desde un archivo |
 | \e | postgres | Abrir editor de código |
+| \dt *.* | postgres | Listar todas las tablas de un esquema |
 | \q | postgres | Terminar la consola |
 | SELECT version(); | SQL | Ver versión de postgres |
+| show hba_file; | postgres | Mostrar ubicación de archivo de configuración |
+
+
