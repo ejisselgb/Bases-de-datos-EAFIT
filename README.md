@@ -20,6 +20,13 @@ Conexión remota a base de datos
 
 psql -h (ip) -p (puerto postgres) -U (usuario) -d (base_datos)
 
+psql ^
+   --host= {endpoint_rds_aws} ^
+   --port= 5432 ^
+   --username= {your_user} ^
+   --password ^
+   --dbname=MoviesEafit {Base de datos que utilizaremos para los trabajos de clase y trabajo independiente, RedSocial: base de datos de trabajo en clase)
+
 
 | Comando   |      Tipo      |  Descripción |
 |----------|:-------------:|:------:|
