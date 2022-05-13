@@ -48,3 +48,19 @@ psql ^
 | show hba_file; | postgres | Mostrar ubicación de archivo de configuración |
 
 
+### Glosario de términos para DynamoDB
+
+| Comando   | Descripción |
+|----------|:------:|
+| aws --version  | Ver versión consola AWS |
+| aws configure  | Configurar consola de AWS |
+| java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 8001 | Iniciar servicio de Dynamo |
+| aws dynamodb list-tables --endpoint-url http://localhost:8001 | Listar tablas existentes en Dynamo |
+| aws dynamodb scan --table-name table_course_DB --endpoint-url http://localhost:8001 | Scan sobre la tabla de Dynamo |
+| aws dynamodb put-item --table-name Cats --item file://datadynamo.json --endpoint-url http://localhost:38001 | Agregar elemento a la tabla |
+| aws dynamodb query --table-name table_course_DB --key-condition-expression "id=:id" --expression-attribute-values file://expression_attibutes.json --endpoint-url http://localhost:8001 | Filtrar por key de la tabla |
+| aws dynamodb scan --table-name table_course_DB --filter-expression "cellphone= :cell " --expression-attribute-values  file://expression_attibutes_filter.json --endpoint-url http://localhost:8001 | Filtrar por otros atributos de la tabla |
+| aws dynamodb delete-item --table-name table_course_DB --key file://expression_attibutes_filter.json --endpoint-url http://localhost:8001 | Eliminar elementos de la tabla |
+| aws dynamodb delete-item --table-name table_course_DB --endpoint-url http://localhost:8001 | Eliminar todos los registros de una tabla |
+
+
